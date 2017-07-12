@@ -1,37 +1,77 @@
-## Welcome to GitHub Pages
+# 接口定义
 
-You can use the [editor on GitHub](https://github.com/3dudu/openSNS-Api-Docs/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+## SNS接口
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+#### 请求通用头
+- 请求头 User-Agent 需要拼上字符串 ‘easier’，例如：
 
-### Markdown
+> Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 `easierVideo/1.0`
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+` 客户端http框架需要开启自动cookie维护，如果手动维护cookie需要处理如下两个cookie `
 
-```markdown
-Syntax highlighted code block
+> Cookie: PHPSESSID=8upu7ahgdtgh8ojfbt3joa57q1; opensns_OX_LOGGED_USER=OfqtQ7sp6B-xarKiloTjTbk8Op7TdeLly-l1rz5%3DfHjdqtc7NiiJ3qOwX-LUM5RHIh5O4rr4qH7p3Ano9ZwqqdIpFp90nlTxJnq4pt8BYBnKoq8Kz
 
-# Header 1
-## Header 2
-### Header 3
 
-- Bulleted
-- List
+#### 通用响应格式
 
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+```json
+{
+  "status": 0,
+  "data":{},
+  "info": "请登陆后再进行操作"
+}
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+|参数名|类型|说明|
+|:-------|:-------|:-------|
+| status | number| 结果码，1：成功，0：失败 |
+| - data |object  | 成功有对象 |
+| info | string| 失败时返回失败描述,成功时可选 |
 
-### Jekyll Themes
+#### 用户接口
+ - [1.1 登录接口](1.1-登录接口.md)
+ - [1.2 用户注册接口](1.2 用户注册接口)
+ - [1.3 用户信息接口](1.3 用户信息接口)
+ - [1.4 用户信息更新接口](1.4 用户信息更新接口)
+ - [1.5 省市县获取接口](1.5 省市县获取接口)
+ - [1.6 用户搜索接口](1.6 用户搜索接口)
+ - [1.7 关注/取消关注接口](1.7 关注/取消关注接口)
+ - [1.8 上传头像接口](1.8 上传头像接口)
+ - [1.9 保存头像接口](1.9 保存头像接口)
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/3dudu/openSNS-Api-Docs/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+#### 微博接口 
+ - [2.1 微博列表接口](2.1 载入微博列表)
+ - [2.2 发布微博接口](2.2 发布微博接口)
+ - [2.3 微博回复接口](2.3 微博回复接口)
+ - [2.4 微博点赞接口](2.4 微博点赞接口)
+ - [2.5 微博回复列表接口](2.5 微博回复列表接口)
 
-### Support or Contact
+#### 评论接口
+ - [3.1 评论概述](3.1 评论概述)
+ - [3.2 评论列表](3.2 评论列表)
+ - [3.3 发表评论](3.3 发表评论)
+ - [3.4 评论回复](3.4 评论回复)
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+#### 圈子接口
+ - [4.1 圈子搜索接口](4.1 圈子搜索接口)
+ - [4.2 圈子类型接口](4.2 圈子类型接口)
+ - [4.3 我的圈子接口](4.3 我的圈子接口)
+ - [4.4 圈子详情接口](4.4 圈子详情接口)
+ - [4.5 加入圈子接口](4.5 加入圈子接口)
+ - [4.6 退出圈子接口](4.6 退出圈子接口)
+ - [4.7 圈子帖子列表接口](4.7 圈子帖子列表接口)
+ - [4.8 圈子成员列表接口](4.8 圈子成员列表接口)
+ - [4.9 圈子发帖接口](4.9 圈子发帖接口)
+ - [4.10 圈子发帖回复接口](4.10 圈子发帖回复接口)
+ - [4.11 帖子详情接口](4.11 帖子详情接口)
+ - [4.12 帖子回复列表接口](4.12 帖子回复列表接口)
+ - [4.13 圈子发帖楼中楼回复接口](4.13 圈子发帖楼中楼回复接口)
+ - [4.14 创建圈子接口](4.14 创建圈子接口)
+ - [4.15 贴子点赞接口](4.15 帖子点赞接口)
+ - [4.16 贴子发现接口](4.16 帖子发现接口)
+
+#### 其他
+ - [5.1 上传文件接口](5.1 上传文件接口)
+ - [5.2 下载文件接口](5.2 下载文件接口)
+ - [5.3 图片上传接口](5.3 图片上传接口)
+ - [5.4 图片获取接口](5.4 图片获取接口)
