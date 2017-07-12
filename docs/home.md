@@ -1,28 +1,3 @@
-# 需求文档
-### 需求文档
-- [产品需求文档](http://git.easier.cn/easierVideo/ui-design/raw/master/%E6%98%93%E8%A7%86%E9%A2%91PRD.docx)
-
-# 架构图
-### 功能图
-- [功能图](功能图)
-
-### 架构图
-- [架构图](架构图)
-
-### 关键流程
-- [登录认证](http://git.easier.cn/easierVideo/ui-design/raw/master/%E8%AE%A4%E8%AF%81%E6%B5%81%E7%A8%8B.png)
-
-### 设计稿
-- [低保真](http://git.easier.cn/easierVideo/ui-design/tree/master/%E4%BD%8E%E4%BF%9D%E7%9C%9F)
-- [高保真](http://git.easier.cn/easierVideo/ui-design/tree/master/%E9%AB%98%E4%BF%9D%E7%9C%9F)
-
-# 数据库定义
-### SNS数据库
-- [SNS数据库](数据库表结构)
-
-### IM数据库
-- [IM数据库](im数据库表结构)
-
 # 接口定义
 
 ## SNS接口
@@ -100,10 +75,3 @@
  - [5.2 下载文件接口](5.2 下载文件接口)
  - [5.3 图片上传接口](5.3 图片上传接口)
  - [5.4 图片获取接口](5.4 图片获取接口)
-
-
-## XMPP接口
- - [6.1 登录认证接口](6.1 登录认证接口)
-
-## IM开发文档
- - [华为CAAS开发SDK](http://git.easier.cn/easierVideo/ui-design/wikis/开发sdk文档)
